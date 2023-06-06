@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Expenses Application</title>
+  </head>
+  <body>
+    <h1 class="text-center text-danger display-3">
+      Lets follow the our expenses
+    </h1>
+    <section class="container m-auto">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Add an income.."
+          aria-label="Recipient's username"
+          aria-describedby="button-addon2"
+        />
+        <button
+          class="btn btn-inline-secondary bg-warning"
+          type="button"
+          id="button-addon2"
+        >
+          Add
+        </button>
+      </div>
+
+      <!-- ******************second part -->
+      <form class="row g-3 mt-2 border rounded-3 p-2">
+        <h4 class="display-4 text-center text-warning">The Form Area</h4>
+        <div class="col-md-6">
+          <label for="choose" class="form-label">Expenses Area</label>
+          <select id="choose" class="form-select">
+            <option selected>Choose...</option>
+            <option>Rent</option>
+            <option>Gas</option>
+            <option>Electricty</option>
+            <option>Kitchen</option>
+            <option>Comunication Bills</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="col-md-6">
+          <label for="date-time" class="form-label">Date & Time</label>
+          <input type="datetime-local" class="form-control" id="date-time" />
+        </div>
+        <div class="col-md-6">
+          <label for="amount" class="form-label">Amount</label>
+          <input type="text" class="form-control" id="amount" placeholder="€" />
+        </div>
+        <div class="col-12 text-center">
+          <button type="submit" class="btn btn-inline-secondary bg-warning">
+            Save
+          </button>
+        </div>
+      </form>
+      <section class="list-header">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">First</th>
+              <th scope="col">Last</th>
+              <th scope="col">Handle</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </section>
+
+    <!-- ************************script area  -->
+    <script src="./app.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
