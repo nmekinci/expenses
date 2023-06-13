@@ -7,6 +7,7 @@ let dateTime = document.getElementById("date-time")
 let amount = document.getElementById("amount")
 let saveButton = document.getElementById("save")
 let tableElement = document.getElementById("list-table")
+let trashIcon = document.querySelector(".bi-trash3")
 
 let resultIncomesSpan = document.getElementById("result-incomes")
 let resultExpensesSpan = document.getElementById("result-expenses")
@@ -14,9 +15,12 @@ let resultSumspan = document.getElementById("result-sum")
 
 let jSonArr = [];
 let jSonObj ;
-
 // *************events listeners
+window.addEventListener("load", () =>{
+    console.log(dateTime);
+    dateTime.valueAsDate = new Date()
 
+})
 inputAddButton.addEventListener("click",() => {
     console.log(inputIncome.value);
     addIncomesToResult()
@@ -36,12 +40,18 @@ saveButton.addEventListener("click",(e) => {
     resultSum()
 });
 
+trashIcon.addEventListener("click", (e) => {
+
+})
+
 
 // ************* Functions area 
 
 const addIncomesToResult = () => {
     resultIncomesSpan.innerText = Number(resultIncomesSpan.innerText) + Number(inputIncome.value)
 }
+
+
 const addExpensesToList = () => {
     let newTr = document.createElement("tr")
 
@@ -78,6 +88,11 @@ const addExpensesToList = () => {
     resultExpensesSpan.innerText = Number(resultExpensesSpan.innerText) + Number(jSonObj.amnt)
     console.log(resultExpensesSpan.innerText);
 }
+
+
 const resultSum = () => {
     resultSumspan.innerText = Number(resultIncomesSpan.innerText) - Number(resultExpensesSpan.innerText)
+}
+const remove = () => {
+    
 }
